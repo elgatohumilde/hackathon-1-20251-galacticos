@@ -26,4 +26,13 @@ public interface CompanyRepository extends JpaRepository<Company, Long> {
     @Query("SELECT c.state, COUNT(c) FROM Company c GROUP BY c.state")
     List<Object[]> countCompaniesByState();
 
+    // Añadir al CompanyRepository
+    @Query("SELECT r.modelType, SUM(r.maxRequests), SUM(r.usedRequests)" +
+            "FROM Restriction r WHERE r.company.id = :companyId " +
+            "GROUP BY r.modelType")
+    List<Object[]> findConsumptionDataByCompanyId(Long companyId);
+
+    // Corregir el método de fechas
+    List<Company> findByAffiliationDateBetween(String startDate, String endDate);
+
 }
