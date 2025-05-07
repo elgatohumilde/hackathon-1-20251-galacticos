@@ -1,7 +1,7 @@
-package com.example.hackathon_1.user.infrastructure;
+package com.example.hackathon_1.finalUser.infrastructure;
 
-import com.example.hackathon_1.user.domain.User;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.hackathon_1.finalUser.domain.FinalUser;
+import com.example.hackathon_1.user.infrastructure.UserRepository;
 
-public interface UserRepository<T extends User> extends JpaRepository<T, Long> {
+public interface FinalUserRepository extends UserRepository<FinalUser> {
 }

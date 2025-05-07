@@ -16,6 +16,7 @@ public class Model {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String modelType;
 
     @Column(nullable = false)

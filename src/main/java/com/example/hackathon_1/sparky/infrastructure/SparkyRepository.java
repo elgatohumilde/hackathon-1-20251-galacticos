@@ -1,8 +1,7 @@
 package com.example.hackathon_1.sparky.infrastructure;
 
-import com.example.hackathon_1.restriction.domain.Sparky;
+import com.example.hackathon_1.sparky.domain.Sparky;
+import com.example.hackathon_1.user.infrastructure.UserRepository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public class SparkyRepository extends JpaRepository<Sparky, Long> {
+public interface SparkyRepository extends UserRepository<Sparky> {
 };
